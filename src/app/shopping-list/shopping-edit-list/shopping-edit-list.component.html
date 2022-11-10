@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-lg-6">
+        <form>
+            <div class="d-flex justify-content-start">
+                <div class="mb-3 me-3">
+                    <label  class="form-label" >Name</label>
+                    <input type="text" class="form-control" #inputName>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Number</label>
+                    <input type="number" class="form-control"  #inputAmount>
+                  </div>
+            </div>
+            <button  type="submit" class="btn btn-success me-2" (click)="addIngredient()" 
+            [disabled]="(inputName.value == '') ? isDisabled : !isDisabled"
+            >Add</button>
+            <button type="submit" class="btn btn-danger me-2">Delete</button>
+            <button type="submit" class="btn btn-warning">Clear</button>
+
+          </form>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-lg-12 mb-3">
+        <button type="button" class="btn btn-info float-end" >Add New Recipe</button>
+    </div>
+</div>
+<app-recipe-item 
+*ngFor="let recipe of Recipes"
+(click)="onItemSelected(recipe)"
+[Recipe]="recipe"
+
+></app-recipe-item>

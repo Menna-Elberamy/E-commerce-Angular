@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-lg-6">
+        <app-recipe-list (receipeDetail)="emitReceipeDetail($event)"  ></app-recipe-list>
+    </div>
+    <div class="col-lg-6">
+    <app-recipe-detail 
+        [recipeDetail]="selectedDetails"
+        *ngIf="selectedDetails; else noDetail"
+        >
+    </app-recipe-detail>
+    <ng-template #noDetail class="d-flex align-items-center">
+        <h4>Please Select Recipe , First! </h4>
+    </ng-template>
+    </div>
+</div>
