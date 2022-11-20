@@ -1,8 +1,8 @@
 <div class="row mt-5">
     <div class="col-lg-12 ">
-        <app-shopping-edit-list (onAddIngredient)="onIngredientAdded($event)"></app-shopping-edit-list>
+        <app-shopping-edit-list ></app-shopping-edit-list>
         <hr>
-        <ul class="list-group mb-2" *ngFor="let ingredient of Ingredients">
+        <ul class="list-group mb-2" *ngFor="let ingredient of ingredients">
             <li class="list-group-item d-flex justify-content-between align-items-center">
              {{ ingredient.name}}
               <span class="badge bg-primary rounded-pill">{{ ingredient.amount}}</span>

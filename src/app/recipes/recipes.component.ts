@@ -1,30 +1,18 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Recipe } from './recipe.model';
+import { RecipeService } from './recipe.service';
 
 @Component({
   selector: 'app-recipes',
   templateUrl: './recipes.component.html',
-  styleUrls: ['./recipes.component.sass']
+  styleUrls: ['./recipes.component.sass'],
+  providers:[RecipeService]
 })
 export class RecipesComponent implements OnInit {
- 
-  title:string=''; description:string='' ; imagePath:string ='';
-  selectedDetails:Recipe
   constructor() { }
-
   ngOnInit(): void {
 
   }
-  emitReceipeDetail(recipe:Recipe){
-   this.selectedDetails={
-    title:recipe.title,
-    description:recipe.description,
-    imagePath:recipe.imagePath
-   }
-
-  }
-
-  
 
 }

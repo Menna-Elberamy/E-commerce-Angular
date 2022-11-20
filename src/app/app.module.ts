@@ -10,8 +10,9 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditListComponent } from './shopping-list/shopping-edit-list/shopping-edit-list.component';
 import { HeaderComponent } from './header/header.component';
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
-
-
+import { ShoppingListService } from './shopping-list/shopping-list.service';
+import { RouterModule, Routes } from '@angular/router';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 
 
 @NgModule({
@@ -24,14 +25,15 @@ import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-it
     ShoppingEditListComponent,
     HeaderComponent,
     RecipeItemComponent,
+    RecipeEditComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
-  providers: [],
+  providers: [ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
